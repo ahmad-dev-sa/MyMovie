@@ -20,7 +20,7 @@ class MoviesController{
         $movie_data = [
 
             'mv_title' => $_POST['mv_title'],
-            'mv_year_released' => $_POST['mv_year_released'],
+            'mv_year_released' => $_POST['mv_year_released']
         ];
 
        $movie_id = $this->crud->create($movie_data, 'movies');
