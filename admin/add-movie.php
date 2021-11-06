@@ -201,7 +201,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST')){
                         <div class="col-sm-10">
                             <select data-placeholder="Select Genre(s)..." multiple class="form-control genre"  name="genres[]" id="genre[]">
                               <?php
-                                include_once "Crud.php";
+                                include_once "../Crud.php";
                                 
                                 $crud = new Crud();
 
@@ -237,7 +237,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST')){
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn pull-right">Submit</button>
-                            <a href="list-movies.html" class="btn pull-right" style="margin-right: 5px;">Back</a>
+                            <a href="list-movies.php" class="btn pull-right" style="margin-right: 5px;">Back</a>
                         </div>
                     </div>
                 </form>

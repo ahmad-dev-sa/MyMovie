@@ -48,19 +48,26 @@ class MoviesController{
     }
 
 
+    public function getMovies(){
+
+        $query = "SELECT mv_id, mv_title,img_path, gnr_name, GROUP_CONCAT(gnr_name) genres,mv_year_released
+                    FROM movies
+                    JOIN mv_genres on mvg_ref_movie = mv_id
+                    JOIN genres on mvg_ref_genre = gnr_id";
+         
+                   
+
+    
+        $results = $this->crud->read($query);
+        return  $results;
+
+    }
+
+
 
 
 
 
 
    }
-
-
-
-
-
-
-
-
-}
 ?>
